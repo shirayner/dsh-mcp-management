@@ -1,0 +1,9 @@
+node_modules/
+*.tgz
+coverage/
+.ace/
+.env
+.env.*
+!.env.example
+*.bak
+*.tmp

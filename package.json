@@ -1,0 +1,46 @@
+{
+  "name": "@shirayner/dsh-mcp-management",
+  "version": "0.2.1",
+  "description": "Profile-isolated MCP server management and device-code OAuth for DeepSeek Harness",
+  "engines": { "node": ">=24.5.0" },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-release.js"
+  },
+  "dependencies": { "@deepseek-ai/dsh-atomic-write": "^0.2.1-rc.5", "yaml": "^2.9.1" },
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "profile-store.js",
+    "server-config.js",
+    "oauth.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CHANGELOG.md",
+    "docs/design.md",
+    "docs/oauth.md"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
